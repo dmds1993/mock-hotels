@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('hotels', function() {
     this.route('detail', {path: '/detail/:hotel_id/rooms/:room_id'});
   });
+  this.route('congratulations');
 });
 
 export default Router;
