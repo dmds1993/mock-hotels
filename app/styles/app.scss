@@ -1,0 +1,28 @@
+
+@import "ember-bootstrap/bootstrap";
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    overflow-x: hidden;
+}
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
+footer {
+    margin: 20px 0;
+}
+
+.img-responsive-hotel-list {
+  width: 360px;
+  height: 200px;
+}
+
+.product-description {
+  overflow: hidden;
+  height: 117px;
+  white-space: pre-line;
+  word-spacing: inherit;
+  text-align: justify;
+}
