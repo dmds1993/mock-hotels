@@ -19,7 +19,7 @@ module.exports = function(environment) {
     },
 
     APP: {
-      host: 'http://localhost:5050/dev'
+      host: `https://sciensa-treinamento-hotels.herokuapp.com/${environment}`
       // Here you can pass flags/options to your application instance
       // when it is created
     }
