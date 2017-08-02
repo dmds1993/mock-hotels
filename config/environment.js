@@ -5,6 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'mock-hotels',
     environment: environment,
     rootURL: '/',
+    namespace: '',
     locationType: 'auto',
 
     EmberENV: {
@@ -19,11 +20,15 @@ module.exports = function(environment) {
     },
 
     APP: {
-      host: `https://sciensa-treinamento-hotels.herokuapp.com/${environment}`
+      host: `https://sciensa-treinamento-hotels.herokuapp.com/${namespace}`
       // Here you can pass flags/options to your application instance
       // when it is created
     }
   };
+
+  if (environment === 'dev') {
+    ENV.namespace = 'dev'
+  }
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
@@ -45,7 +50,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    environment = 'dev'
+    ENV.namespace = 'dev'
   }
 
   return ENV;
