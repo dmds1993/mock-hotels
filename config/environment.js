@@ -1,6 +1,7 @@
 /* eslint-env node */
 
 module.exports = function(environment) {
+  let namespace = environment === 'production' ? 'dev' : 'dev';
   var ENV = {
     modulePrefix: 'mock-hotels',
     environment: environment,
@@ -26,10 +27,6 @@ module.exports = function(environment) {
     }
   };
 
-  if (environment === 'dev') {
-    ENV.namespace = 'dev'
-  }
-
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -50,7 +47,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.namespace = 'dev'
+
   }
 
   return ENV;
